@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Clone Repo') {
+            steps {
+                git 'https://github.com/saymon005/saymon.git'
+            }
+        }
+
+        stage('Deploy to Apache') {
+            steps {
+                sh '''
+                    sudo rm -rf /var/www/saymon.moheshkhalitribune.com/*
+                    sudo cp -r * /var/www/saymon.moheshkhalitribune.com/
+                '''
+            }
+        }
+    }
+}
