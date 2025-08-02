@@ -1,6 +1,8 @@
 pipeline {
     agent any
-
+     triggers {
+        githubPush()  // enables webhook trigger
+    }
     stages {
         stage('Clone Repo') {
             steps {
