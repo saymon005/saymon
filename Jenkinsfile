@@ -15,6 +15,7 @@ pipeline {
                 sh '''
                     sudo rm -rf /var/www/saymon.moheshkhalitribune.com/*
                     sudo cp -r * /var/www/saymon.moheshkhalitribune.com/
+                    sudo systemctl reload apache2
                 '''
             }
         }
