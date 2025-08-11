@@ -53,23 +53,43 @@
 
 }
 
-@media (max-width: 767px) {
 
-    /* custom css */
+/* Mobile devices */
+@media (max-width: 767px) {
     h1 {
-        font-size: 40px;
-        line-height: 48px;
+        font-size: 28px;
+        line-height: 36px;
     }
 
     h2 {
-        font-size: 25px;
+        font-size: 22px;
+    }
+    h3 {
+        font-size: 18px;
+        line-height: 26px;
     }
 
     p {
-        font-size: 13px;
-        line-height: 24px;
+        font-size: 14px;
+        line-height: 22px;
     }
 
+    .banner_wrapper {
+        padding: 60px 0;
+    }
+
+    .banner_wrapper h1 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .banner_wrapper h6 {
+        font-size: 14px;
+    }
+
+    .banner_wrapper img {
+        max-width: 50px;
+    }
     /* About */
     .about_wrapper ul.nav-pills {
         width: 100%;
@@ -89,5 +109,88 @@
     /* blog */
     .blog_wrapper .card {
         min-height: 500px;
+    }
+
+    .sidebar {
+        padding: 10px;
+    }
+    .post-body img {
+        margin-bottom: 15px;
+    }
+    .blog_post_wrapper, .sidebar {
+        flex: 1 1 100%;
+    }
+     .add-comment {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .add-comment button {
+        width: 100%;
+    }
+}
+@media (min-width: 768px) {
+    .add-comment {
+        flex-direction: row;
+        align-items: center;
+    }
+    .add-comment input {
+        flex: 1;
+        min-width: 0;
+    }
+    .add-comment button {
+        flex-shrink: 0;
+        white-space: nowrap;
+        width: auto;
+        margin-left: 10px;
+    }
+}
+@media (max-width: 576px) {
+    .banner_wrapper img {
+        max-width: 300px;
+    }
+}
+/* Extra small devices (less than 480px) */
+@media (max-width: 480px) {
+    .banner_wrapper {
+        padding: 40px 0;
+    }
+
+    .banner_wrapper h1 {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .banner_wrapper h6 {
+        font-size: 12px;
+    }
+
+    .banner_wrapper img {
+        max-width: 200px;
+    }
+     h3 {
+        font-size: 16px;
+    }
+    .like_dislike button {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+    .comment-section input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    iframe {
+        width: 100% !important;
+        height: auto !important;
+    }
+    .add-comment {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .add-comment button {
+        width: 100%;
     }
 }
