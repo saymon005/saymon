@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.layout')
 
 @section('title', "It's Saymon - Home")
 
@@ -15,4 +15,9 @@
     <!-- Project Section -->
     @include('sections.projects')
 
+        <!-- Blog Section -->
+    @include('sections.blog')
+
+    <!-- Contact section -->
+    @include('sections.contact')
 @endsection
